@@ -12,14 +12,13 @@ public class PlayerInput : MonoBehaviour
     
     [SerializeField] private float dashSpeed = 15f;
     [SerializeField] private float dashDuration = 0.2f;
-    [SerializeField] private float dashCooldown = 1f;
-    [SerializeField] private TrailRenderer tr; //NEW
+    [SerializeField] private TrailRenderer tr;
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        tr.emitting = false; //NEW
+        tr.emitting = false;
     } 
     
     void OnMove(InputValue value)
@@ -53,11 +52,11 @@ public class PlayerInput : MonoBehaviour
 
         while(Time.time < startTime + dashDuration)
         {
-            tr.emitting = true; //NEW
+            tr.emitting = true;
             rb.velocity = new Vector3(x * dashSpeed, rb.velocity.y, z * dashSpeed);
             yield return null;
         }  
-        tr.emitting = false; //NEW
+        tr.emitting = false;
     }
 
 

@@ -441,7 +441,6 @@ MonoBehaviour:
   speed: 5
   dashSpeed: 15
   dashDuration: 0.2
-  dashCooldown: 1
   tr: {fileID: 1722582187}
 --- !u!54 &1722582185
 Rigidbody:
@@ -624,7 +623,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!135 &1841751904
 SphereCollider:
   m_ObjectHideFlags: 0
